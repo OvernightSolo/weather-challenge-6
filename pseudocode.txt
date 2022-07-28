@@ -1,0 +1,37 @@
+create document
+   open html and declare language
+   open head
+      declare metadata
+      declare title
+      insert css file
+   close head
+   create body: flexbox
+      create container: flexbox
+         create header: flexbox
+            create div for "Weather Dashboard" text
+         close header
+         create main: flexbox
+            create sidebar (aside): flexbox
+               create input
+               create Search button
+               create separater line
+               create search history element where past cities will go, dynamically
+            close sidebar
+            create section: flexbox (this is where main weather info will go)
+               Get city from search, along with date, using moment.js
+               Use openweather api to enter weather details
+            close section
+            create section: flexbox (this is where 5-day forecast will go)
+               create div for "5-Day Forecast" text
+               create div that will hold daily forecast cards
+                  div 1
+                  div 2
+                  div 3
+                  div 4
+                  div 5
+               close div
+            close section
+         close main
+         insert javascript file
+      close body
+   close HTML

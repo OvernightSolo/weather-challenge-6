@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard app</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="dash">Weather Dashboard</h1>
+      </header>
+      <main class="primary">
+        <aside>
+          <h2 class="side-heading">Search for a city:</h2>
+          <input type="text" name="search" id="search" />
+          <button type="submit">Search</button>
+          <hr class="separator" />
+        </aside>
+      </main>
+      <section class="main-forecast">
+        <div class="city-date"></div>
+      </section>
+      <section class="five-day">
+        <h3>5-Day Forecast</h3>
+        <div class="forecast-5card"></div>
+        <div class="forecast-5card"></div>
+        <div class="forecast-5card"></div>
+        <div class="forecast-5card"></div>
+        <div class="forecast-5card"></div>
+      </section>
+    </div>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

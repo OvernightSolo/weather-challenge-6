@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+header,
+main,
+aside,
+.container .main-forecast,
+.five-day {
+  display: flex;
+}
+
+.container {
+  width: 80%;
+  height: auto;
+  border: 5px solid black;
+}
+
+.header {
+  border: 1px solid blue;
+  justify-content: center;
+}
+
+aside {
+  border: 1px solid red;
+  flex-direction: column;
+  height: 500px;
+}
+
+.main-forecast {
+  border: 1px solid green;
+}
+
+.five-day {
+  border: 1px solid black;
+}
+
+aside {
+  width: 20%;
+}
