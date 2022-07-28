@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <header class="header">
-        <h1 class="dash">Weather Dashboard</h1>
+        <h1>Weather Dashboard</h1>
       </header>
       <main class="primary">
         <aside>
@@ -19,18 +19,20 @@
           <button type="submit">Search</button>
           <hr class="separator" />
         </aside>
+        <div class="forecasts">
+          <section class="main-forecast">Main Search Forecast</section>
+          <div>
+            <h3>5-Day Forecast</h3>
+          </div>
+          <section class="five-day">
+            <div class="forecast-5card"></div>
+            <div class="forecast-5card"></div>
+            <div class="forecast-5card"></div>
+            <div class="forecast-5card"></div>
+            <div class="forecast-5card"></div>
+          </section>
+        </div>
       </main>
-      <section class="main-forecast">
-        <div class="city-date"></div>
-      </section>
-      <section class="five-day">
-        <h3>5-Day Forecast</h3>
-        <div class="forecast-5card"></div>
-        <div class="forecast-5card"></div>
-        <div class="forecast-5card"></div>
-        <div class="forecast-5card"></div>
-        <div class="forecast-5card"></div>
-      </section>
     </div>
     <script src="./assets/script.js"></script>
   </body>

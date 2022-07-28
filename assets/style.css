@@ -12,34 +12,53 @@ body {
 header,
 main,
 aside,
-.container .main-forecast,
-.five-day {
+.container,
+.five-day,
+.forecasts,
+.primary {
   display: flex;
 }
 
 .container {
   width: 80%;
-  height: auto;
   border: 5px solid black;
+  flex-direction: column;
 }
 
 .header {
-  border: 1px solid blue;
+  border: 2px solid blue;
   justify-content: center;
+  width: 100%;
 }
 
 aside {
-  border: 1px solid red;
+  border: 2px solid red;
   flex-direction: column;
   height: 500px;
 }
 
+.forecasts {
+  flex-direction: column;
+  width: 100%;
+}
+
 .main-forecast {
-  border: 1px solid green;
+  border: 2px solid green;
+  height: 50%;
 }
 
 .five-day {
+  border: 2px solid orange;
+  height: 50%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.forecast-5card {
   border: 1px solid black;
+  height: 90%;
+  width: 18%;
 }
 
 aside {
