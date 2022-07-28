@@ -5,8 +5,9 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Kanit", sans-serif;
 }
 
 header,
@@ -15,26 +16,50 @@ aside,
 .container,
 .five-day,
 .forecasts,
-.primary {
+.primary,
+.search {
   display: flex;
 }
 
 .container {
-  width: 80%;
   border: 5px solid black;
   flex-direction: column;
+  padding: 5px;
+  height: 600px;
 }
 
 .header {
   border: 2px solid blue;
   justify-content: center;
   width: 100%;
+  height: 11%;
+  align-items: center;
+}
+
+.primary {
+  height: 100%;
 }
 
 aside {
   border: 2px solid red;
   flex-direction: column;
-  height: 500px;
+  width: 27%;
+  padding: 5px;
+}
+
+.search {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 23%;
+}
+
+#search-input {
+  height: 1.9em;
+  padding: 7px;
+}
+
+button {
+  height: 1.5em;
 }
 
 .forecasts {
@@ -44,23 +69,25 @@ aside {
 
 .main-forecast {
   border: 2px solid green;
-  height: 50%;
+  height: 40%;
 }
 
 .five-day {
   border: 2px solid orange;
-  height: 50%;
+  height: 60%;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .forecast-5card {
   border: 1px solid black;
-  height: 90%;
-  width: 18%;
+  height: 80%;
+  width: 17%;
 }
 
-aside {
-  width: 20%;
+.five-title {
+  padding-left: 10px;
 }
