@@ -17,7 +17,9 @@ aside,
 .five-day,
 .forecasts,
 .primary,
-.search {
+.search-div,
+.five-title,
+#city-history {
   display: flex;
 }
 
@@ -25,15 +27,16 @@ aside,
   border: 5px solid black;
   flex-direction: column;
   padding: 5px;
-  height: 600px;
+  height: 700px;
 }
 
 .header {
-  border: 2px solid blue;
   justify-content: center;
   width: 100%;
   height: 11%;
   align-items: center;
+  background-image: linear-gradient(180deg, rgb(10, 10, 64), rgb(17, 17, 216));
+  color: white;
 }
 
 .primary {
@@ -41,53 +44,82 @@ aside,
 }
 
 aside {
-  border: 2px solid red;
   flex-direction: column;
   width: 27%;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
-.search {
+.search-div {
   flex-direction: column;
   justify-content: space-between;
-  height: 23%;
+  height: 25%;
 }
 
 #search-input {
-  height: 1.9em;
+  height: 2.4em;
   padding: 7px;
 }
 
-button {
-  height: 1.5em;
+#search-btn {
+  height: 2em;
+  background-color: rgb(16, 16, 193);
+  color: white;
+  border-radius: 5px;
+}
+
+#separator {
+  border: none;
+  height: 3px;
+  background-color: grey;
+}
+
+#city-history {
+  margin-top: 0.5rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#city-history button {
+  margin-bottom: 10px;
+  height: 2em;
+  background-color: gray;
+  border-radius: 5px;
+  color: white;
 }
 
 .forecasts {
   flex-direction: column;
-  width: 100%;
+  width: 95%;
+  border-left: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 7px;
 }
 
 .main-forecast {
-  border: 2px solid green;
-  height: 40%;
+  height: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .five-day {
-  border: 2px solid orange;
   height: 60%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
+  flex-wrap: wrap;
 }
 
 .forecast-5card {
-  border: 1px solid black;
   height: 80%;
   width: 17%;
+  background-color: rgb(18, 18, 103);
 }
 
 .five-title {
   padding-left: 10px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 10%;
 }

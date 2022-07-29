@@ -20,11 +20,19 @@
       </header>
       <main class="primary">
         <aside>
-          <div class="search">
+          <div class="search-div">
             <h2 class="side-heading">Search for a city:</h2>
-            <input type="text" name="search" id="search-input" />
-            <button type="submit">Search</button>
-            <hr class="separator" />
+            <input
+              type="text"
+              name="search"
+              id="search-input"
+              placeholder="enter city"
+            />
+            <button type="submit" id="search-btn">Search</button>
+            <hr id="separator" />
+          </div>
+          <div>
+            <div id="city-history"></div>
           </div>
         </aside>
         <div class="forecasts">
@@ -32,7 +40,7 @@
             This is where the main Search Forecast will go.
           </section>
           <div class="five-title">
-            <h3>5-Day Forecast</h3>
+            <h2>5-Day Forecast</h2>
           </div>
           <section class="five-day">
             <div class="forecast-5card"></div>
@@ -44,6 +52,7 @@
         </div>
       </main>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>
