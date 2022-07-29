@@ -99,6 +99,7 @@ aside {
   height: 50%;
   margin-left: 10px;
   margin-right: 10px;
+  border: 1px solid black;
 }
 
 .five-day {
