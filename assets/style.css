@@ -101,7 +101,7 @@ aside {
   margin-bottom: 7px;
 }
 
-.main-forecast {
+.current {
   height: 50%;
   margin-left: 10px;
   margin-right: 10px;
@@ -110,7 +110,7 @@ aside {
   padding-left: 10px;
 }
 
-.main-forecast p {
+.current p {
   margin-bottom: 10px;
 }
 
