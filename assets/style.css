@@ -110,6 +110,14 @@ aside {
   padding-left: 10px;
 }
 
+.main-forecast p {
+  margin-bottom: 10px;
+}
+
+#city {
+  margin-bottom: 15px;
+}
+
 .five-day {
   height: 60%;
   flex-direction: row;
@@ -132,11 +140,4 @@ aside {
   align-items: flex-end;
   height: 10%;
   margin-bottom: 15px;
-}
-
-#example {
-  width: 400px;
-  height: 100px;
-  border: 2px solid black;
-  display: none;
 }

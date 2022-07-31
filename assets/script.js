@@ -5,12 +5,13 @@ var cityNameEl = $("#city");
 var temperatureEl = $("#temp");
 var windEl = $("#wind");
 var humidityEl = $("#humidity");
-var uvIndexEl = $("#uv-index");
+var descriptionEl = $("#description");
+var today = moment().format("MM/DD/YYYY");
+var forecastBody = $(".main-forecast");
+var cityEntered = cityInputEl.val();
 
 function handleFormSubmit(e) {
   e.preventDefault();
-
-  var cityEntered = cityInputEl.val();
 
   if (!cityEntered) {
     alert("Please enter a city.");
@@ -20,16 +21,12 @@ function handleFormSubmit(e) {
 
   cityInputEl.val("");
 }
-searchButtonEl.on("click", handleFormSubmit);
-
-var today = moment();
-$("#example").text(today.format("MMMM Do YYYY, h:mm:ss a"));
-
-var forecastBody = $(".main-forecast");
 
 function getWeather() {
-  var requestUrl =
-    "https://api.openweathermap.org/data/2.5/weather?q=london&appid=620e0c436745e0d32b6d06368bb0fd5f&units=imperial";
+  let key = "620e0c436745e0d32b6d06368bb0fd5f";
+  let language = "en";
+  let units = "imperial";
+  let requestUrl = `https://api.openweathermap.org/data/2.5/weather?cityEntered=${cityEntered}&appid=${key}&units=${units}&language=${language}`;
 
   fetch(requestUrl)
     .then(function (response) {
@@ -37,20 +34,23 @@ function getWeather() {
     })
     .then(function (data) {
       console.log(data);
-      var nameValue = "Here's the city name";
-      var tempValue = "Here's the temperature";
-      var windValue = "Here's the wind speed";
-      var humidityValue = "Here's the humidity";
-      var uvIndexValue = "Here's the UV index";
+      var nameValue = data.name + " (" + today + ")";
+      var tempValue = "Temperature: " + data.main.temp + " °F";
+      var windValue = "Wind Speed: " + data.wind.speed + " mph";
+      var humidityValue = "Humidity: " + data.main.humidity + "%";
+      var descriptionValue = "Conditions: " + data.weather[0].description;
+      var iconCode = data.weather[0].icon;
 
       $(cityNameEl).html(nameValue);
       $(temperatureEl).html(tempValue);
       $(windEl).html(windValue);
       $(humidityEl).html(humidityValue);
-      $(uvIndexEl).html(uvIndexValue);
+      $(descriptionEl).html(descriptionValue);
     });
 
   $(forecastBody).append();
 }
 
 getWeather();
+
+searchButtonEl.on("click", handleFormSubmit);
