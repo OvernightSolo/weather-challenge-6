@@ -9,6 +9,7 @@ var uvIndexEl = $("#uv-index");
 var key = "620e0c436745e0d32b6d06368bb0fd5f";
 var cityEntered;
 var forecastBody = $(".current");
+var currentIcon = $("#current-icon");
 //1st five-day forecast variables to access DOM items
 var day1Day = $("#day1-day");
 var day1Icon = $("#day1-icon");
@@ -84,21 +85,18 @@ function handleFormSubmit(e) {
         .then(function (data) {
           console.log(data);
           var nameValue =
-            cityEntered +
-            " " +
-            "(" +
-            today.format("MM/DD/YYYY") +
-            ")" +
-            " " +
+            cityEntered + " " + "(" + today.format("MM/DD/YYYY") + ")" + " ";
+          //Determining what will go in each current weather field
+          var currentIconValue =
             "<img src=http://openweathermap.org/img/wn/" +
             data.current.weather[0].icon +
-            ".png>";
-          //Determining what will go in each current weather field
+            "@4x.png>";
           var tempValue = "Temperature: " + data.current.temp + " °F";
           var windValue = "Wind Speed: " + data.current.wind_speed + " mph";
           var humidityValue = "Humidity: " + data.current.humidity + "%";
           var uvIndexValue = "UV Index: " + data.current.uvi;
           //Appending the weather items to the current weather div
+          $(currentIcon).html(currentIconValue);
           $(cityNameEl).html(nameValue);
           $(temperatureEl).html(tempValue);
           $(windEl).html(windValue);
