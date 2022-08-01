@@ -20,7 +20,7 @@ function handleFormSubmit(e) {
   }
   cityHistoryEl.append("<button>" + cityEntered + "</button>");
   cityInputEl.val("");
-  var today = moment().format("MM/DD/YYYY");
+  var today = moment();
   var coords =
     "http://api.openweathermap.org/geo/1.0/direct?q=" +
     cityEntered +
@@ -52,7 +52,7 @@ function handleFormSubmit(e) {
             cityEntered +
             " " +
             "(" +
-            today +
+            today.format("MM/DD/YYYY") +
             ")" +
             " " +
             "<img src=http://openweathermap.org/img/wn/" +
@@ -68,7 +68,12 @@ function handleFormSubmit(e) {
           $(windEl).html(windValue);
           $(humidityEl).html(humidityValue);
           $(uvIndexEl).html(uvIndexValue);
-
+          //These items append the weather items to the 5-day forecast
+          $(day1).html("Tomorrow");
+          $(day2).html(today.add(2, "day").format("dddd"));
+          $(day3).html(today.add(1, "day").format("dddd"));
+          $(day4).html(today.add(1, "day").format("dddd"));
+          $(day5).html(today.add(1, "day").format("dddd"));
           // $(forecastBody).append();
         });
     });

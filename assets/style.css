@@ -110,13 +110,12 @@ aside {
   margin-left: 10px;
   margin-right: 10px;
   border: 1px solid black;
-  padding-bottom: 10px;
   padding-left: 10px;
   background-color: var(--background-color);
 }
 
 .current p {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 
 #city {
@@ -131,12 +130,15 @@ aside {
   padding-left: 10px;
   padding-right: 10px;
   flex-wrap: wrap;
+  color: white;
 }
 
 .forecast-5card {
   height: 88%;
   width: 17%;
   background-color: rgb(18, 18, 103);
+  padding-left: 12px;
+  padding-top: 10px;
 }
 
 .five-title {
