@@ -4,8 +4,12 @@
   padding: 0;
 }
 
+:root {
+  --background-color: rgb(59, 145, 156);
+}
+
 body {
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
   font-family: "Kanit", sans-serif;
 }
@@ -25,10 +29,10 @@ aside,
 }
 
 .container {
-  border: 5px solid black;
+  border: 3px solid black;
   flex-direction: column;
   padding: 5px;
-  height: 700px;
+  height: 800px;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -88,15 +92,15 @@ aside {
 #city-history button {
   margin-bottom: 10px;
   height: 2em;
-  background-color: gray;
+  background-color: var(--background-color);
   border-radius: 5px;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
 
 .forecasts {
   flex-direction: column;
   width: 95%;
-  /* border-left: 2px solid black; */
   margin-top: 10px;
   margin-bottom: 7px;
 }
@@ -108,6 +112,7 @@ aside {
   border: 1px solid black;
   padding-bottom: 10px;
   padding-left: 10px;
+  background-color: var(--background-color);
 }
 
 .current p {

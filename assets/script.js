@@ -55,8 +55,9 @@ function handleFormSubmit(e) {
             today +
             ")" +
             " " +
+            "<img src=http://openweathermap.org/img/wn/" +
             data.current.weather[0].icon +
-            "http://openweathermap.org/img/wn/10d@2x.png";
+            ".png>";
           var tempValue = "Temperature: " + data.current.temp + " °F";
           var windValue = "Wind Speed: " + data.current.wind_speed + " mph";
           var humidityValue = "Humidity: " + data.current.humidity + "%";
