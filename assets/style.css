@@ -24,9 +24,7 @@ aside,
 .search-div,
 .five-title,
 .current,
-#city-history,
-#example,
-#current-details {
+#city-history {
   display: flex;
 }
 
@@ -124,8 +122,13 @@ aside {
 
 #current-details {
   flex-direction: column;
-  width: 23%;
+  width: 30%;
   height: 100%;
+}
+
+#current-icon img {
+  width: 250px;
+  height: 250px;
 }
 
 #current-icon {
@@ -141,6 +144,11 @@ aside {
   margin-bottom: 15px;
 }
 
+#uv-index {
+  display: inline-block;
+  padding: 3px 7px;
+}
+
 .five-day {
   height: 65%;
   width: 100%;
@@ -154,7 +162,7 @@ aside {
 }
 
 .forecast-5card {
-  height: 100%;
+  height: 95%;
   width: 17%;
   background-color: rgb(18, 18, 103);
   padding: 10px 12px;

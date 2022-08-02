@@ -85,16 +85,16 @@ function handleFormSubmit(e) {
         .then(function (data) {
           console.log(data);
           var nameValue =
-            cityEntered + " " + "(" + today.format("MM/DD/YYYY") + ")" + " ";
+            cityEntered + " " + "(" + today.format("MM/DD/YYYY") + ")";
           //Determining what will go in each current weather field
-          var currentIconValue =
-            "<img src=http://openweathermap.org/img/wn/" +
-            data.current.weather[0].icon +
-            "@4x.png>";
           var tempValue = "Temperature: " + data.current.temp + " °F";
           var windValue = "Wind Speed: " + data.current.wind_speed + " mph";
           var humidityValue = "Humidity: " + data.current.humidity + "%";
           var uvIndexValue = "UV Index: " + data.current.uvi;
+          var currentIconValue =
+            "<img src=http://openweathermap.org/img/wn/" +
+            data.current.weather[0].icon +
+            "@4x.png>";
           //Appending the weather items to the current weather div
           $(currentIcon).html(currentIconValue);
           $(cityNameEl).html(nameValue);
@@ -102,6 +102,21 @@ function handleFormSubmit(e) {
           $(windEl).html(windValue);
           $(humidityEl).html(humidityValue);
           $(uvIndexEl).html(uvIndexValue);
+
+          if (data.current.uvi <= 2) {
+            $("#uv-index").css({ "background-color": "green", color: "white" });
+          } else if (data.current.uvi <= 5) {
+            $("#uv-index").css({
+              "background-color": "yellow",
+              color: "black",
+            });
+          } else if (data.current.uvi <= 7) {
+            $("#uv-index").css("background-color", "orange");
+          } else if (data.current.uvi <= 10) {
+            $("#uv-index").css("background-color", "red");
+          } else {
+            $("#uv-index").css("background-color", "purple");
+          }
           //Determining what will go in the first 5-day card
           var day1HighValue = "High: " + data.daily[0].temp.max + " °F";
           var day1IconValue =
