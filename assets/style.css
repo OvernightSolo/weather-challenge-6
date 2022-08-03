@@ -102,6 +102,11 @@ aside {
   font-weight: bold;
 }
 
+#city-history button:hover {
+  cursor: pointer;
+  background-color: rgb(216, 115, 78);
+}
+
 .forecasts {
   flex-direction: column;
   width: 100%;

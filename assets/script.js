@@ -1,3 +1,4 @@
+//Variables for sidebar and current weather
 var cityInputEl = $("#search-input");
 var searchButtonEl = $("#search-btn");
 var cityHistoryEl = $("#city-history");
@@ -47,14 +48,20 @@ var day5Wind = $("#day5-wind");
 var day5Humid = $("#day5-humid");
 
 //This is the primary function that powers the app
-function handleFormSubmit(e) {
-  e.preventDefault();
+function getWeather() {
   var cityEntered = cityInputEl.val();
   if (!cityEntered) {
     alert("Please enter a city.");
     return;
   }
+  //This adds cities to the sidebar history
   cityHistoryEl.append("<button>" + cityEntered + "</button>");
+  $("#city-history").on("click", "button", function () {
+    console.log("you clicked me");
+    //This is supposed to recall the weather of the cities in the history, but I can't get it to work.
+    $(cityInputEl).append(cityHistoryEl.val());
+  });
+
   cityInputEl.val("");
   var today = moment();
   var coords =
@@ -201,8 +208,5 @@ function handleFormSubmit(e) {
     });
 }
 
-// function getWeather() {}
-// getWeather();
-
-// This is click event that triggers the entire app
-searchButtonEl.on("click", handleFormSubmit);
+// This is click event that triggers the Search
+searchButtonEl.on("click", getWeather);
