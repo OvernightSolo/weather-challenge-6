@@ -120,7 +120,7 @@ function getWeather() {
           } else if (data.current.uvi <= 7) {
             $("#uv-index").css("background-color", "orange");
           } else if (data.current.uvi <= 10) {
-            $("#uv-index").css("background-color", "red");
+            $("#uv-index").css({ "background-color": "red", color: "white" });
           } else {
             $("#uv-index").css("background-color", "purple");
           }

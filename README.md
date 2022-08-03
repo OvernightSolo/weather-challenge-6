@@ -1,26 +1,21 @@
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
+# Robert (Scott) Sterling: Weather Dashboard App
 
-GIVEN a weather dashboard with form inputs:
+## Description
 
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-//Input field and button with a click event to search
-//Use the OpenWeather API to retrieve weather data
-//Local storage will be used to add the searched city to the search history.
+This application utilizes HTML, CSS, jQuery, and the OpenWeatherMap API to generate a weather dashboard.
 
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-//
-//
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-//
-//
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-//
-//
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+### Summary of Features
+
+When a world city is entered into the input field, and Search is clicked, the current weather conditions populate in the primary section, with details including temperature, wind speed, humidity percentage, and the ultraviolet index.
+
+The UV index colors are based on the following global chart:
+![Radiation exposure categories of Global Solar UV Index. Image Credit: OTT HydroMet](./assets/images/ImageForArticle_1536_446944744201629168.webp)
+
+The click evennt also triggers a five-day forecast for the given city, indicated in the five cards underneath the current weather. The temperatures in the 5-day forecast are broken into the day's high and low.
+
+Anytime a city is searched, the city name is added to the sidebar as a button. I attempted to add a click event that would have recalled that city's weather information, but I could not accomplish that aspect.
+
+Watch a video of the action:
+![Weather App Demo](./assets/images/Untitled_%20Jul%2031%2C%202022%204_08%20PM.gif)
+
+Link to deployed application:
