@@ -16,6 +16,6 @@ The click evennt also triggers a five-day forecast for the given city, indicated
 Anytime a city is searched, the city name is added to the sidebar as a button. I attempted to add a click event that would have recalled that city's weather information, but I could not accomplish that aspect.
 
 Watch a video of the action:
-![Weather App Demo](./assets/images/Untitled_%20Jul%2031%2C%202022%204_08%20PM.gif)
+![Weather App Demo](./assets/images/Weather%20App%20Demo.gif)
 
 Link to deployed application:
