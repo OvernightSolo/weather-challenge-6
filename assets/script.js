@@ -65,7 +65,7 @@ function getWeather() {
   cityInputEl.val("");
   var today = moment();
   var coords =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     cityEntered +
     "&appid=" +
     key;
@@ -79,7 +79,7 @@ function getWeather() {
       console.log(data);
       //This is the nested fetch that uses the latitude and longitude to get the weather
       return fetch(
-        "http://api.openweathermap.org/data/2.5/onecall?lat=" +
+        "https://api.openweathermap.org/data/2.5/onecall?lat=" +
           data[0].lat +
           "&lon=" +
           data[0].lon +
@@ -99,7 +99,7 @@ function getWeather() {
           var humidityValue = "Humidity: " + data.current.humidity + "%";
           var uvIndexValue = "UV Index: " + data.current.uvi;
           var currentIconValue =
-            "<img src=http://openweathermap.org/img/wn/" +
+            "<img src=https://openweathermap.org/img/wn/" +
             data.current.weather[0].icon +
             "@4x.png>";
           //Appending the weather items to the current weather div
@@ -127,7 +127,7 @@ function getWeather() {
           //Determining what will go in the first 5-day card
           var day1HighValue = "High: " + data.daily[0].temp.max + " °F";
           var day1IconValue =
-            "<img src=http://openweathermap.org/img/wn/" +
+            "<img src=https://openweathermap.org/img/wn/" +
             data.daily[0].weather[0].icon +
             ".png>";
           var day1LowValue = "Low: " + data.daily[0].temp.min + " °F";
@@ -143,7 +143,7 @@ function getWeather() {
           //Determining what will go in the second 5-day card
           var day2HighValue = "High: " + data.daily[1].temp.max + " °F";
           var day2IconValue =
-            "<img src=http://openweathermap.org/img/wn/" +
+            "<img src=https://openweathermap.org/img/wn/" +
             data.daily[1].weather[0].icon +
             ".png>";
           var day2LowValue = "Low: " + data.daily[1].temp.min + " °F";
@@ -159,7 +159,7 @@ function getWeather() {
           //Determining what will go in the third 5-day card
           var day3HighValue = "High: " + data.daily[2].temp.max + " °F";
           var day3IconValue =
-            "<img src=http://openweathermap.org/img/wn/" +
+            "<img src=https://openweathermap.org/img/wn/" +
             data.daily[2].weather[0].icon +
             ".png>";
           var day3LowValue = "Low: " + data.daily[2].temp.min + " °F";
@@ -175,7 +175,7 @@ function getWeather() {
           //Determining what will go in the fourth 5-day card
           var day4HighValue = "High: " + data.daily[3].temp.max + " °F";
           var day4IconValue =
-            "<img src=http://openweathermap.org/img/wn/" +
+            "<img src=https://openweathermap.org/img/wn/" +
             data.daily[3].weather[0].icon +
             ".png>";
           var day4LowValue = "Low: " + data.daily[3].temp.min + " °F";
@@ -191,7 +191,7 @@ function getWeather() {
           //Determining what will go in the fifth 5-day card
           var day5HighValue = "High: " + data.daily[4].temp.max + " °F";
           var day5IconValue =
-            "<img src=http://openweathermap.org/img/wn/" +
+            "<img src=https://openweathermap.org/img/wn/" +
             data.daily[4].weather[0].icon +
             ".png>";
           var day5LowValue = "Low: " + data.daily[4].temp.min + " °F";
