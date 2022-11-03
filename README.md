@@ -18,4 +18,4 @@ Anytime a city is searched, the city name is added to the sidebar as a button. I
 Watch a video of the action:
 ![Weather App Demo](./assets/images/Weather%20App%20Demo.gif)
 
-Link to deployed application: https://overnightsolo.github.io/weather-challenge-6/
+Link to deployed application: https://overnightsolo.github.io/weather-finder-sterling/
